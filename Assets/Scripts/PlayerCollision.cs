@@ -10,7 +10,7 @@ public class PlayerCollision : MonoBehaviour
     void OnCollisionEnter(Collision other){
         if(other.collider.tag == "Obstacle"){
             movement.enabled = false;
-            Debug.Log("Hit Obstacle");
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 }
